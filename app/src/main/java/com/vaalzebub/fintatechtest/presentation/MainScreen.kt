@@ -91,7 +91,7 @@ fun WebSocketMessageView(instrumentName: String, messageState: MessageUiState) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight(0.25f),
+            .fillMaxHeight(0.15f),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
@@ -141,7 +141,7 @@ private fun TopRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight(0.25f),
+            .fillMaxHeight(0.15f),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
@@ -151,6 +151,7 @@ private fun TopRow(
             value = state.currentInstrument?.name ?: "",
             label = { Text("Select symbol") },
             readOnly = true,
+            modifier = Modifier.fillMaxWidth(0.9f),
             onValueChange = {}
         )
         AppSelectBox(

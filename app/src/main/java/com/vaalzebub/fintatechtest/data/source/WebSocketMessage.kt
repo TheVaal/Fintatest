@@ -4,6 +4,11 @@ import java.time.LocalDateTime
 import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
 
+class BaseKind(
+    val price: Double,
+    val timestamp: String
+)
+
 data class WebSocketMessage(
     val instrumentId: String = "",
     val provider: String = "",
@@ -49,7 +54,3 @@ data class WebSocketMessage(
     }
 }
 
-class BaseKind(
-    val price: Double,
-    val timestamp: String
-)
